@@ -1285,3 +1285,141 @@ Processing by Api::V1::GamesController#show as HTML
 Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-22 11:37:38 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.88ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-22 11:37:52 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"demian", "user"=>{"username"=>"demian"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "demian"], ["created_at", "2019-01-22 16:37:52.335607"], ["updated_at", "2019-01-22 16:37:52.335607"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 4]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.8ms)
+Completed 201 Created in 8ms (Views: 2.1ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-22 11:37:52 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>4, "win"=>false, "game"=>{"user_id"=>4, "win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.6ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "win", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 4], ["win", 0], ["created_at", "2019-01-22 16:37:52.374743"], ["updated_at", "2019-01-22 16:37:52.374743"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 201 Created in 10ms (Views: 1.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-22 11:47:32 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.46ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-22 11:47:42 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"matt", "user"=>{"username"=>"matt"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "matt"], ["created_at", "2019-01-22 16:47:42.624468"], ["updated_at", "2019-01-22 16:47:42.624468"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.41ms)
+Completed 201 Created in 7ms (Views: 3.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-22 11:47:42 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>5, "win"=>false, "game"=>{"user_id"=>5, "win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "win", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 5], ["win", 0], ["created_at", "2019-01-22 16:47:42.646044"], ["updated_at", "2019-01-22 16:47:42.646044"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 201 Created in 10ms (Views: 2.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-22 12:06:32 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.36ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-22 12:06:37 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"kate", "user"=>{"username"=>"kate"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "kate"], ["created_at", "2019-01-22 17:06:37.826942"], ["updated_at", "2019-01-22 17:06:37.826942"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.96ms)
+Completed 201 Created in 10ms (Views: 2.3ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-22 12:06:37 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>6, "win"=>false, "game"=>{"user_id"=>6, "win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "win", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 6], ["win", 0], ["created_at", "2019-01-22 17:06:37.857164"], ["updated_at", "2019-01-22 17:06:37.857164"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 201 Created in 11ms (Views: 1.3ms | ActiveRecord: 1.5ms)
+
+
