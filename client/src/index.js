@@ -115,40 +115,56 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderDoors() {
-    let doors = `
+    let door1 = `
       <div class="perspective">
-          <div data-win-id="win" data-door-id="1" class="thumb">
-          </div>
-      </div>
-      <div class="perspective">
-          <div data-win-id="win" data-door-id="2" class="thumb">
-          </div>
-      </div>
-      <div class="perspective">
-          <div data-win-id="lose" data-door-id="3" class="thumb">
-          </div>
+        <div data-win-id="win" data-door-id="1" class="thumb">
+        </div>
       </div>
     `
-    return doors
+    let door2 = `
+      <div class="perspective">
+        <div data-win-id="win" data-door-id="2" class="thumb">
+        </div>
+      </div>
+    `
+    let door3 = `
+      <div class="perspective">
+        <div data-win-id="lose" data-door-id="3" class="thumb">
+        </div>
+      </div>
+    `
+    let doorArray = [door1, door2, door3]
+    return shuffleDoor(doorArray)
   }
 
+  function shuffleDoor(doorArray) {
+    let currentIndex = doorArray.length
+    let temp;
+    let index;
+    while (currentIndex > 0) {
+      index = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      temp = doorArray[currentIndex]
+      doorArray[currentIndex] = doorArray[index]
+      doorArray[index] = temp;
+    }
+    console.log(doorArray);
+    return doorArray.join('')
 
-  //
-  // let doorArray = [door1, door2, door3]
-  //
-  // function shuffleDoor(doorArray) {
-  //   let currentIndex = doorArray.length, temporaryValue, randomIndex
-  //
-  //   while (0 !== currrentIndex) {
-  //     randomIndex = Math.floor(Math.random() * currentIndex)
-  //     currentIndex -= 1
-  //
-  //     temporaryValue = doorArray[currentIndex]
-  //     doorArray[currentIndex] = doorArray[randomIndex]
-  //     doorArray[randomIndex] = temporaryValue
-  //   }
-  //   return doorArray
-  // }
+    // let currentIndex = doorArray.length, temporaryValue, randomIndex
+    //
+    // while (0 !== currrentIndex) {
+    //
+    //   let randomIndex = Math.floor(Math.random() * currentIndex)
+    //   currentIndex -= 1
+    //
+    //   temporaryValue = doorArray[currentIndex]
+    //   doorArray[currentIndex] = doorArray[randomIndex]
+    //   doorArray[randomIndex] = temporaryValue
+    //
+    // }
+    // return doorArray.join('')
+  }
 
   function openDoor(id) {
     let x = gameCanvas.querySelector(`[data-door-id="${id}"]`)
