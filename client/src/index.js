@@ -45,10 +45,16 @@ document.addEventListener('DOMContentLoaded', () => {
       .then( r => r.json() )
       .then( newUser => {
         createNewGame(newUser)
-        canvas.innerHTML = renderNewGame(newUser)
+        canvas.innerHTML = renderNewGame()
       })
-    }
-  })
+    } else if (e.target.className === "new_game") {
+      const newGame = canvas.querySelector('.new_game')
+
+    } // end of newGame else if statement
+  }) // end of newUserForm event listener
+
+
+
 
   }) // end of canvas event listener
   /****************** EVENT LISTENERS **********************************/
@@ -81,10 +87,41 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(console.log)
   }
 
-  function renderNewGame(user) {
+  function renderNewGame() {
     let gameCanvas = `
-
+      <div class="new_game">
+        <h3>Game Rules</h3>
+        <p>1. Hiding behind one of three doors is a trap.<br>
+        2. your mission is to open all of the doors without running into the trap<br>
+        3. if you manage to avoid the trap until you open the very last door, you win<br>
+        4. see if you can score a winning streak!</p>
+        <br>
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb">
+            </div>
+        </div>
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb">
+            </div>
+        </div>
+        <div class="perspective" onclick="openDoor(this)">
+            <div class="thumb">
+            </div>
+        </div>
+      </div>
     `
+    return gameCanvas
+  }
+
+  function openDoor(field) {
+    let y = document.getElementById(`${field}`).find(".thumb")
+    let x = y.setAttribute("class")
+    if (y.classList.contains("thumbOpened")) {
+        y.classList.remove("thumbOpened")
+    } else {
+        document.querySelector(".thumb").classList.remove("thumbOpened")
+        y.className = ("thumbOpened")
+    }
   }
   /****************** HELPER **********************************/
 

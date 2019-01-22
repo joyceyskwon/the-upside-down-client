@@ -1,4 +1,66 @@
-/* .canvas {
-  background-color: #fff000;
-  border-top-style: dotted;
-} */
+.perspective {
+  background: url("http://dc428.4shared.com/img/QWu4ziBq/s3/doorBorder.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  display: inline;
+  float: left;
+  height: 274px;
+  width: 147px;
+  margin: 20px;
+  margin-left: 0px;
+  -webkit-perspective: 450;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.thumb {
+  background: url("http://dc428.4shared.com/img/-vayshJ-/s3/ClassDoor.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 147px;
+  height: 274px;
+  position: absolute;
+  box-sizing: border-box;
+  border-radius: 3px;
+  box-shadow: 0 0 0 10px rgba(255, 255, 255, .0) inset;
+  transition: 1s transform linear;
+  transform-origin: left;
+  cursor: pointer;
+}
+
+.thumbOpened
+{
+  transform: rotateY(-90deg);
+  transform-origin: 8px;
+  transition: .5s linear;
+}
+
+.alert {
+  padding: 8px 35px 8px 14px;
+  margin-bottom: 20px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  color: #000;
+
+  transform-origin: left;
+  transform:rotateY(180deg);
+  opacity:0;
+  animation-name: go;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+  width:350px;
+}
+
+@keyframes go {
+  100%{
+    opacity:1;
+    transform:rotateY(0deg);
+  }
+}
