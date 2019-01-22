@@ -57,14 +57,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }) // end of newUserFormDiv event listener
 
+  // door3 is THE TRAPPPP!!!!!
   gameCanvas.addEventListener('click', (e) => {
 
     if (e.target.dataset.doorId === "1") {
+      const currentGame = allGames.find( game => game.id == e.target.dataset.gameId)
+      fetch(`${GAME_URL}/${currentGame.id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          "win": true
+        })
+      })
       openDoor(1)
+
     } else if (e.target.dataset.doorId === "2") {
       openDoor(2)
+
     } else if (e.target.dataset.doorId === "3") {
       openDoor(3)
+      gameCanvas.innerHTML = renderGameOverPage()
+      const newGameBtn = gameCanvas.querySelector('#play_new_game')
+
+      newGameBtn.addEventListener('click', (e) => {
+        location.reload()
+      })
     }
   })
 
@@ -150,20 +170,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     console.log(doorArray);
     return doorArray.join('')
-
-    // let currentIndex = doorArray.length, temporaryValue, randomIndex
-    //
-    // while (0 !== currrentIndex) {
-    //
-    //   let randomIndex = Math.floor(Math.random() * currentIndex)
-    //   currentIndex -= 1
-    //
-    //   temporaryValue = doorArray[currentIndex]
-    //   doorArray[currentIndex] = doorArray[randomIndex]
-    //   doorArray[randomIndex] = temporaryValue
-    //
-    // }
-    // return doorArray.join('')
   }
 
   function openDoor(id) {
@@ -173,6 +179,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       return x.classList.add("thumbOpened")
     }
+  }
+
+  function renderGameOverPage() {
+    let gameOver = `
+      <h3>Aw, you lost!</h3>
+      <button id="play_new_game" type="button" name="button">Play Again</button>
+    `
+    return gameOver
   }
 
   /****************** HELPER **********************************/
