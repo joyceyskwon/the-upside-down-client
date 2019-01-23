@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("the DOM has loaded")
 
-  /****************** VARIABLES **********************************/
-  // Add variables here
+  /***************** START VARIABLES ***************************/
+
   let allGames = []
   let allUsers = []
   let gameObj = {}
@@ -12,9 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header')
   const newUserFormDiv = document.querySelector('.new_user_form_div')
   const gameCanvas = document.querySelector('.game_canvas')
-  /****************** VARIABLES **********************************/
+  /************** END VARIABLES ********************************/
 
-  /****************** FETCH **********************************/
+  /**************** START FETCH ********************************/
   // Fetch method to pull API from the backend
   fetch(GAME_URL)
   .then( r => r.json() )
@@ -22,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
     allGames = gameData
     console.log(gameData)
   })
-  /****************** FETCH **********************************/
+  /****************** END FETCH **********************************/
 
-  /****************** EVENT LISTENERS **********************************/
-  // Add event listeners here
+  /*************** START EVENT LISTENERS ************************/
+
   header.addEventListener('click', (e) => {
     newUserFormDiv.innerHTML = newUserForm()
   }) // end of header event listener
@@ -43,9 +43,8 @@ document.addEventListener('DOMContentLoaded', () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          "username": newUsernameValue
+          "username": newUsernameValue,
           "streak": 0
-          // custom logic to update streak each time user wins a game
         })
       })
       .then( r => r.json() )
@@ -60,7 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }) // end of newUserFormDiv event listener
 
-  // door3 is the TRAPPPP!!!!!
+
+  // door3 is a TRAPPPP!!!!!
   gameCanvas.addEventListener('click', (e) => {
     if (e.target.dataset.doorId === "1" || e.target.dataset.doorId === "2") {
       // console.log(e.target);
@@ -90,20 +90,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     else if (e.target.dataset.doorId === "3") {
       openDoor(3)
+      sleep(50)
       gameCanvas.innerHTML = renderGameOverPage()
       const newGameBtn = gameCanvas.querySelector('#play_new_game')
-
       newGameBtn.addEventListener('click', (e) => {
         location.reload()
       })
     } // end of door3 else if statement
   })
 
-  /****************** EVENT LISTENERS **********************************/
+  /*************** END EVENT LISTENERS **************************/
 
-  /****************** HELPER **********************************/
-  // Add helper funcitons here
-
+  /*************** START HELPER **********************************/
+  
   function newUserForm() {
     let newUserForm = `
       <form class="new_user_form" action="index.html" method="post">
@@ -205,6 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function sleep(ms) {
+    return new Promise( resolve => setTimeout(resolve, ms) )
+  }
+
   // renders gameOverPage after user clicks on door3
   function renderGameOverPage() {
     let gameOver = `
@@ -213,6 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     return gameOver
   }
-  /****************** HELPER **********************************/
+  /*************** END HELPER **********************************/
 
 }) // end of DOMContentLoaded
