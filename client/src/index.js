@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /****************** END FETCH **********************************/
 
   /*************** START EVENT LISTENERS ************************/
-
+// IS MY CACHE BEING TRACKEDDDDD?!!
   header.addEventListener('click', (e) => {
     newUserFormDiv.innerHTML = newUserForm()
   }) // end of header event listener
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /*************** END EVENT LISTENERS **************************/
 
   /*************** START HELPER **********************************/
-  
+
   function newUserForm() {
     let newUserForm = `
       <form class="new_user_form" action="index.html" method="post">
