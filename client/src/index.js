@@ -85,16 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
           "second_win": gameObj.second_win
         })
       })
+      .then(res => res.json())
+      .then(console.log)
 
     } // end of door1 if statement
 
     else if (e.target.dataset.doorId === "3") {
       openDoor(3)
-      sleep(50)
-      gameCanvas.innerHTML = renderGameOverPage()
-      const newGameBtn = gameCanvas.querySelector('#play_new_game')
-      newGameBtn.addEventListener('click', (e) => {
-        location.reload()
+      setTimeout( () => {
+        gameCanvas.innerHTML = renderGameOverPage()
+      }, 3000)
+      gameCanvas.addEventListener('click', (e) => {
+        if (e.target.className === "play_again") {
+          location.reload()
+        }
       })
     } // end of door3 else if statement
   })
@@ -205,14 +209,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function sleep(ms) {
-    return new Promise( resolve => setTimeout(resolve, ms) )
+    setTimeout( () => {console.log("waiting...");}, ms)
   }
 
   // renders gameOverPage after user clicks on door3
   function renderGameOverPage() {
     let gameOver = `
       <h3>Aw, you lost!</h3>
-      <button id="play_new_game" type="button" name="button">Play Again</button>
+      <button class="play_again" type="button" name="button">Play Again</button>
     `
     return gameOver
   }

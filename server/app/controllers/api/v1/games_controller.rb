@@ -20,8 +20,9 @@ class Api::V1::GamesController < ApplicationController
   end
 
   def update
-    @game = Game.update(game_params)
-    render json: @game, status: :updated
+    @game = Game.find(params[:id])
+    @game.update(game_params)
+    render json: @game
   end
 
   private
