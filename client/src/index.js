@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let allGames = []
   let allUsers = []
   let gameObj = {}
+  let streak = 0
   const BASE_URL = "http://localhost:3000"
   const GAME_URL = `${BASE_URL}/api/v1/games`
   const USER_URL = `${BASE_URL}/api/v1/users`
@@ -59,21 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }) // end of newUserFormDiv event listener
 
-
-  // door3 is a TRAPPPP!!!!!
+  // door 1 or 2 event listener
   gameCanvas.addEventListener('click', (e) => {
     if (e.target.dataset.doorId === "1" || e.target.dataset.doorId === "2") {
-      // console.log(e.target);
       let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
       let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
+
       openDoor(parseInt(e.target.dataset.doorId))
+
+      // checkFirstOrSecondWin(gameObj)
       if (gameObj.first_win) {
         gameObj.second_win = true
       } else {
         gameObj.first_win = true
       }
-      debugger
 
+      // patchCurrentGame(currentGame)
       fetch(`${GAME_URL}/${currentGame.id}`, {
         method: 'PATCH',
         headers: {
@@ -85,23 +87,47 @@ document.addEventListener('DOMContentLoaded', () => {
           "second_win": gameObj.second_win
         })
       })
-      .then(res => res.json())
-      .then(console.log)
 
+      // if the user passes the first game
+      while (gameObj.first_win && gameObj.second_win) {
+          fetch(`${USER_URL}/${currentUser.id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              "streak": streak++
+            })
+          })
+          .then( r => r.json() )
+          .then( updatedUserData => {
+            setTimeout( () => {
+              createNewGame(updatedUserData)
+            }, 4000)
+          })
+        // checkFirstOrSecondWin(gameObj)
+        // patchCurrentGame(currentGame)
+        if (gameObj.first_win || gameObj.second_win !== true) {
+          break
+        } // end of if break statement
+      } // end of while loop
     } // end of door1 if statement
 
+    // door3 (TRAP) event listener
     else if (e.target.dataset.doorId === "3") {
-      openDoor(3)
+      openDoor(parseInt(e.target.dataset.doorId))
       setTimeout( () => {
         gameCanvas.innerHTML = renderGameOverPage()
       }, 3000)
       gameCanvas.addEventListener('click', (e) => {
         if (e.target.className === "play_again") {
           location.reload()
-        }
-      })
+        } // end of if play again button statement
+      }) // end of gameCanvas event listener
     } // end of door3 else if statement
-  })
+
+  }) // end of gameCanvas event listener
 
   /*************** END EVENT LISTENERS **************************/
 
@@ -134,11 +160,25 @@ document.addEventListener('DOMContentLoaded', () => {
     .then( r => r.json() )
     .then( newGameData => {
       gameObj = newGameData
-      console.log(newGameData, "I'm in line 214")
+      // console.log(newGameData, "I'm in line 214")
       allGames.push(newGameData)
       const newGame = gameCanvas.querySelector('.new_game')
       const doors = newGame.querySelector('.doors')
       doors.innerHTML = renderDoors(newGameData)
+    })
+  }
+
+  function patchCurrentGame(currentGame) {
+    fetch(`${GAME_URL}/${currentGame.id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({
+        "first_win": gameObj.first_win,
+        "second_win": gameObj.second_win
+      })
     })
   }
 
@@ -220,6 +260,15 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     return gameOver
   }
+
+  function checkFirstOrSecondWin(obj) {
+    if (obj.first_win) {
+      obj.second_win = true
+    } else {
+      obj.first_win = true
+    }
+  }
+
   /*************** END HELPER **********************************/
 
 }) // end of DOMContentLoaded
