@@ -12,11 +12,7 @@ class Api::V1::GamesController < ApplicationController
 
   def create
     @game = Game.create(game_params)
-    if @game
-      render json: @game, status: :created
-    else
-      render json: @game.errors, status: :unprocessable_entity
-    end
+    render json: @game, status: :created
   end
 
   def update

@@ -29,6 +29,22 @@
   cursor: pointer;
 }
 
+.smiles {
+  background: url("https://images.fun.com/products/41680/1-1/gremlins-gizmo-hand-puppet.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  width: 75%;
+  height: 100%;
+  border-radius: 0px;
+  margin: auto;
+  /* box-shadow: 0 0 0 10px rgba(255, 255, 255, .0) inset; */
+  transition: 1s transform linear;
+  transform-origin: center;
+  cursor: pointer;
+  z-index: -2;
+}
+
 .thumbOpened
 {
   transform: rotateY(-90deg);

@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.header')
   const newUserFormDiv = document.querySelector('.new_user_form_div')
   const gameCanvas = document.querySelector('.game_canvas')
+  const newGamePage = document.querySelector('.new_continued_game')
   /************** END VARIABLES ********************************/
+  newGamePage.style.display = "none"
+
 
   /**************** START FETCH ********************************/
   // Fetch method to pull API from the backend
@@ -22,6 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   .then( gameData => {
     allGames = gameData
     console.log(gameData)
+  })
+
+  fetch(USER_URL)
+  .then( r => r.json() )
+  .then( userData => {
+    allUsers = userData
+    console.log(userData);
   })
   /****************** END FETCH **********************************/
 
@@ -64,61 +74,55 @@ document.addEventListener('DOMContentLoaded', () => {
   gameCanvas.addEventListener('click', (e) => {
     if (e.target.dataset.doorId === "1" || e.target.dataset.doorId === "2") {
       let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
-      let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
+      let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
 
       openDoor(parseInt(e.target.dataset.doorId))
-
+      checkFirstOrSecondWin(gameObj)
       // checkFirstOrSecondWin(gameObj)
-      if (gameObj.first_win) {
-        gameObj.second_win = true
-      } else {
-        gameObj.first_win = true
-      }
-
-      // patchCurrentGame(currentGame)
-      fetch(`${GAME_URL}/${currentGame.id}`, {
-        method: 'PATCH',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          "first_win": gameObj.first_win,
-          "second_win": gameObj.second_win
-        })
-      })
+      patchCurrentGame(currentGame)
 
       // if the user passes the first game
       while (gameObj.first_win && gameObj.second_win) {
-        fetch(`${USER_URL}/${currentUser.id}`, {
-          method: 'PATCH',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            "streak": streak++
+        newGamePage.style.display = "block"
+        newGamePage.addEventListener('click', (e) => {
+          const continuePlay = newGamePage.querySelector('.continue_play')
+          newGamePage.style.diplay = "none"
+
+          fetch(`${USER_URL}/${currentUser.id}`, {
+            method: 'PATCH',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+              "streak": ++streak
+            })
           })
+          .then( r => r.json() )
+          .then( updatedUserData => {
+            console.log(updatedUserData);
+            setTimeout( () => {
+              let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
+              createNewGame(updatedUserData)
+              newGamePage.style.display = "none"
+            }, 4000)
+          })
+
         })
-        .then( r => r.json() )
-        .then( updatedUserData => {
-          console.log(updatedUserData);
-          setTimeout( () => {
-            createNewGame(updatedUserData)
-          }, 4000)
-        })
-        // checkFirstOrSecondWin(gameObj)
-        // patchCurrentGame(currentGame)
+
         if (gameObj.first_win || gameObj.second_win !== true) {
           break
         } // end of if break statement
       } // end of while loop
+/************************************************************************/
+
     } // end of door1 if statement
 
     // door3 (TRAP) event listener
     else if (e.target.dataset.doorId === "3") {
       openDoor(parseInt(e.target.dataset.doorId))
       setTimeout( () => {
+        newGamePage.style.display = "none"
         gameCanvas.innerHTML = renderGameOverPage()
       }, 3000)
       gameCanvas.addEventListener('click', (e) => {
@@ -129,6 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     } // end of door3 else if statement
 
   }) // end of gameCanvas event listener
+
+
+
 
   /*************** END EVENT LISTENERS **************************/
 
@@ -181,6 +188,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "second_win": gameObj.second_win
       })
     })
+    .then(r => r.json())
+    .then( updatedGame => {
+      console.log(updatedGame)
+    })
   }
 
   function renderNewGame() {
@@ -203,19 +214,21 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderDoors(game) {
     let door1 = `
       <div class="perspective">
-        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" data-door-id="1" class="thumb">
+        <div data-door-id="1" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" class="thumb">
         </div>
+        <div class="smiles"></div>
       </div>
     `
     let door2 = `
       <div class="perspective">
-        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" data-door-id="2" class="thumb">
+        <div data-door-id="2" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" class="thumb">
         </div>
+        <div class="smiles"></div>
       </div>
     `
     let door3 = `
       <div class="perspective">
-        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="lose" data-door-id="3" class="thumb">
+        <div data-door-id="3" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="lose" class="thumb">
         </div>
       </div>
     `
@@ -269,6 +282,14 @@ document.addEventListener('DOMContentLoaded', () => {
       obj.first_win = true
     }
   }
+
+  // function renderNewGamePage() {
+  //   let newGamePage = `
+  //     <h3>Continue Playing?</h3>
+  //     <button class="continue_play" type="button" name="button">Continue</button>
+  //   `
+  //   return newGamePage
+  // }
 
   /*************** END HELPER **********************************/
 
