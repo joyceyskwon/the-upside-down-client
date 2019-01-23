@@ -90,22 +90,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // if the user passes the first game
       while (gameObj.first_win && gameObj.second_win) {
-          fetch(`${USER_URL}/${currentUser.id}`, {
-            method: 'PATCH',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify({
-              "streak": streak++
-            })
+        fetch(`${USER_URL}/${currentUser.id}`, {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            "streak": streak++
           })
-          .then( r => r.json() )
-          .then( updatedUserData => {
-            setTimeout( () => {
-              createNewGame(updatedUserData)
-            }, 4000)
-          })
+        })
+        .then( r => r.json() )
+        .then( updatedUserData => {
+          console.log(updatedUserData);
+          setTimeout( () => {
+            createNewGame(updatedUserData)
+          }, 4000)
+        })
         // checkFirstOrSecondWin(gameObj)
         // patchCurrentGame(currentGame)
         if (gameObj.first_win || gameObj.second_win !== true) {
