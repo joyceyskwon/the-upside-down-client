@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /****************** VARIABLES **********************************/
   // Add variables here
   let allGames = []
+  let allUsers = []
   const BASE_URL = "http://localhost:3000"
   const GAME_URL = `${BASE_URL}/api/v1/games`
   const USER_URL = `${BASE_URL}/api/v1/users`
@@ -16,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Fetch method to pull API from the backend
   fetch(GAME_URL)
   .then( r => r.json() )
-  .then( newGame => {
-    allGames = newGame
-    console.log(newGame)
+  .then( gameData => {
+    allGames = gameData
+    console.log(gameData)
   })
   /****************** FETCH **********************************/
 
@@ -47,21 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then( r => r.json() )
       .then( newUser => {
-        createNewGame(newUser)
         newUserFormDiv.innerHTML = ""
         gameCanvas.innerHTML = renderNewGame()
         const newGame = gameCanvas.querySelector('.new_game')
         const doors = newGame.querySelector('.doors')
-        doors.innerHTML = renderDoors()
+        createNewGame(newUser)
       })
     }
   }) // end of newUserFormDiv event listener
 
-  // door3 is THE TRAPPPP!!!!!
+  // door3 is the TRAPPPP!!!!!
   gameCanvas.addEventListener('click', (e) => {
 
+    // app needs to keep track of the number of clicks on the door
+    // if the first click is door 1 or door 2
+    // patch method to update first win to true
+    // if the second click is door 1 or door 2
+    // patch mathod to update the second win to true
+    // and create and render a new game
+    // if the first or second click is door 3
+    // terminate the game
     if (e.target.dataset.doorId === "1") {
-      const currentGame = allGames.find( game => game.id == e.target.dataset.gameId)
+      // console.log(e.target);
+      let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
+      let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
+      openDoor(1)
+
       fetch(`${GAME_URL}/${currentGame.id}`, {
         method: 'PATCH',
         headers: {
@@ -69,15 +81,19 @@ document.addEventListener('DOMContentLoaded', () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          "win": true
+          "first_win": true
         })
       })
-      openDoor(1)
+    } // end of door1 if statement
 
-    } else if (e.target.dataset.doorId === "2") {
+    else if (e.target.dataset.doorId === "2") {
+      let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
+      let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
+      console.log("is it hitting this one?");
       openDoor(2)
+    } // end of door2 else if statement
 
-    } else if (e.target.dataset.doorId === "3") {
+    else if (e.target.dataset.doorId === "3") {
       openDoor(3)
       gameCanvas.innerHTML = renderGameOverPage()
       const newGameBtn = gameCanvas.querySelector('#play_new_game')
@@ -85,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
       newGameBtn.addEventListener('click', (e) => {
         location.reload()
       })
-    }
+    } // end of door3 else if statement
   })
 
   /****************** EVENT LISTENERS **********************************/
@@ -95,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function newUserForm() {
     let newUserForm = `
       <form class="new_user_form" action="index.html" method="post">
-        <input id="new_username" type="text" name="username" value="" placeholder="Please enter your username">
+        <input required id="new_username" type="text" name="username" value="" placeholder="Enter your username">
         <input type="submit" value="Create Username">
       </form>
     `
@@ -111,11 +127,18 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       body: JSON.stringify({
         "user_id": user.id,
-        "win": false
+        "first_win": false,
+        "second_win": false
       })
     })
     .then( r => r.json() )
-    .then(console.log)
+    .then( newGameData => {
+      console.log(newGameData, "I'm in line 214")
+      allGames.push(newGameData)
+      const newGame = gameCanvas.querySelector('.new_game')
+      const doors = newGame.querySelector('.doors')
+      doors.innerHTML = renderDoors(newGameData)
+    })
   }
 
   function renderNewGame() {
@@ -134,22 +157,22 @@ document.addEventListener('DOMContentLoaded', () => {
     return gameCanvas
   }
 
-  function renderDoors() {
+  function renderDoors(game) {
     let door1 = `
       <div class="perspective">
-        <div data-win-id="win" data-door-id="1" class="thumb">
+        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" data-door-id="1" class="thumb">
         </div>
       </div>
     `
     let door2 = `
       <div class="perspective">
-        <div data-win-id="win" data-door-id="2" class="thumb">
+        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" data-door-id="2" class="thumb">
         </div>
       </div>
     `
     let door3 = `
       <div class="perspective">
-        <div data-win-id="lose" data-door-id="3" class="thumb">
+        <div data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="lose" data-door-id="3" class="thumb">
         </div>
       </div>
     `

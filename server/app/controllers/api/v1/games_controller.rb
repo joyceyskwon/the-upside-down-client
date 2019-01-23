@@ -12,13 +12,22 @@ class Api::V1::GamesController < ApplicationController
 
   def create
     @game = Game.create(game_params)
-    render json: @game, status: :created
+    if @game
+      render json: @game, status: :created
+    else
+      render json: @game.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    @game = Game.update(game_params)
+    render json: @game, status: :updated
   end
 
   private
 
   def game_params
-    params.require(:game).permit(:user_id, :win)
+    params.require(:game).permit(:user_id, :first_win, :second_win)
   end
 
 end

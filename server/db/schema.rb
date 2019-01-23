@@ -14,7 +14,8 @@ ActiveRecord::Schema.define(version: 2019_01_21_215403) do
 
   create_table "games", force: :cascade do |t|
     t.integer "user_id"
-    t.boolean "win"
+    t.boolean "first_win"
+    t.boolean "second_win"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
