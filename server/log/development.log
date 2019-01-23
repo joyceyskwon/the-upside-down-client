@@ -11776,3 +11776,1304 @@ Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
 ArgumentError (wrong number of arguments (given 1, expected 2)):
   
 app/controllers/api/v1/games_controller.rb:23:in `update'
+Started GET "/api/v1/games/3" for 127.0.0.1 at 2019-01-23 09:22:00 -0500
+Processing by Api::V1::GamesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:9
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (10.32ms)
+Completed 200 OK in 32ms (Views: 12.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:22:02 -0500
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (1.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (74.02ms)
+Completed 200 OK in 91ms (Views: 84.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-23 09:22:02 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:40:21 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (66.3ms)
+Completed 200 OK in 73ms (Views: 63.6ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:40:25 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"awoeifjasodjf", "user"=>{"username"=>"awoeifjasodjf"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "awoeifjasodjf"], ["created_at", "2019-01-23 14:40:25.847766"], ["updated_at", "2019-01-23 14:40:25.847766"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 32]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.03ms)
+Completed 201 Created in 9ms (Views: 2.6ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:40:25 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>32, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>32, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 32], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:40:25.872330"], ["updated_at", "2019-01-23 14:40:25.872330"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 201 Created in 7ms (Views: 1.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:46:41 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (63.05ms)
+Completed 200 OK in 73ms (Views: 64.9ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:46:45 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"aweoifjasd;lfjk", "user"=>{"username"=>"aweoifjasd;lfjk"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "aweoifjasd;lfjk"], ["created_at", "2019-01-23 14:46:45.047470"], ["updated_at", "2019-01-23 14:46:45.047470"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 33]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.57ms)
+Completed 201 Created in 6ms (Views: 2.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:46:45 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>33, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>33, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 33], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:46:45.067379"], ["updated_at", "2019-01-23 14:46:45.067379"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.8ms)
+Completed 201 Created in 7ms (Views: 2.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:48:24 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (57.57ms)
+Completed 200 OK in 63ms (Views: 55.9ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:48:27 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"jikko", "user"=>{"username"=>"jikko"}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "jikko"], ["created_at", "2019-01-23 14:48:27.209185"], ["updated_at", "2019-01-23 14:48:27.209185"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 34]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.52ms)
+Completed 201 Created in 7ms (Views: 2.0ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:48:27 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>34, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>34, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 34], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:48:27.231063"], ["updated_at", "2019-01-23 14:48:27.231063"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.64ms)
+Completed 201 Created in 8ms (Views: 1.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:48:59 -0500
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (51.27ms)
+Completed 200 OK in 55ms (Views: 50.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-23 09:49:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/api/v1/games/34" for 127.0.0.1 at 2019-01-23 09:49:07 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"gameObj"=>{"id"=>34, "user_id"=>34, "first_win"=>true, "second_win"=>false, "user"=>{"id"=>34, "username"=>"jikko"}}, "id"=>"34", "game"=>{}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: game):
+  
+app/controllers/api/v1/games_controller.rb:30:in `game_params'
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:49:40 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (68.17ms)
+Completed 200 OK in 75ms (Views: 64.1ms | ActiveRecord: 10.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:49:47 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"hellokitty", "user"=>{"username"=>"hellokitty"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "hellokitty"], ["created_at", "2019-01-23 14:49:47.218587"], ["updated_at", "2019-01-23 14:49:47.218587"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 35]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.3ms)
+Completed 201 Created in 6ms (Views: 1.7ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:49:47 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>35, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>35, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 35], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:49:47.239534"], ["updated_at", "2019-01-23 14:49:47.239534"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 201 Created in 6ms (Views: 1.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:50:10 -0500
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (49.55ms)
+Completed 200 OK in 56ms (Views: 51.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-23 09:50:10 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/api/v1/games/35" for 127.0.0.1 at 2019-01-23 09:50:15 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"id"=>"35", "user_id"=>35, "first_win"=>true, "second_win"=>false, "user"=>{"id"=>35, "username"=>"hellokitty"}, "game"=>{"id"=>"35", "user_id"=>35, "first_win"=>true, "second_win"=>false}}
+Unpermitted parameter: :id
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:51:28 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (87.72ms)
+Completed 200 OK in 93ms (Views: 87.0ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:51:37 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"gy6u5689", "user"=>{"username"=>"gy6u5689"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "gy6u5689"], ["created_at", "2019-01-23 14:51:37.408312"], ["updated_at", "2019-01-23 14:51:37.408312"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 36]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.25ms)
+Completed 201 Created in 8ms (Views: 1.6ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:51:37 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>36, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>36, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 36], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:51:37.430378"], ["updated_at", "2019-01-23 14:51:37.430378"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 201 Created in 7ms (Views: 1.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:51:55 -0500
+Processing by Api::V1::GamesController#index as HTML
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (62.31ms)
+Completed 200 OK in 68ms (Views: 60.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2019-01-23 09:51:55 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started PATCH "/api/v1/games/36" for 127.0.0.1 at 2019-01-23 09:52:03 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"first_win"=>true, "second_win"=>false, "id"=>"36", "game"=>{"first_win"=>true, "second_win"=>false}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:53:51 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (123.14ms)
+Completed 200 OK in 165ms (Views: 152.7ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:53:54 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"dafsdf", "user"=>{"username"=>"dafsdf"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "dafsdf"], ["created_at", "2019-01-23 14:53:54.868504"], ["updated_at", "2019-01-23 14:53:54.868504"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 37]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.64ms)
+Completed 201 Created in 10ms (Views: 3.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:53:54 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>37, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>37, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 37], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:53:54.891544"], ["updated_at", "2019-01-23 14:53:54.891544"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 201 Created in 6ms (Views: 0.9ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/api/v1/games/37" for 127.0.0.1 at 2019-01-23 09:54:13 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"first_win"=>true, "second_win"=>false, "id"=>"37", "game"=>{"first_win"=>true, "second_win"=>false}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started PATCH "/api/v1/games/37" for 127.0.0.1 at 2019-01-23 09:56:00 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"first_win"=>true, "second_win"=>true, "id"=>"37", "game"=>{"first_win"=>true, "second_win"=>true}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started GET "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:56:08 -0500
+Processing by Api::V1::GamesController#index as */*
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 27], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 29], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 30], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 31], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 32], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 33], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 34], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 36], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 37], ["LIMIT", 1]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer.rb:387
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (68.9ms)
+Completed 200 OK in 76ms (Views: 69.1ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2019-01-23 09:56:33 -0500
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"fwejf", "user"=>{"username"=>"fwejf"}}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("username", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["username", "fwejf"], ["created_at", "2019-01-23 14:56:33.102269"], ["updated_at", "2019-01-23 14:56:33.102269"]]
+  ↳ app/controllers/api/v1/users_controller.rb:14
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/users_controller.rb:14
+[active_model_serializers]   [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."user_id" = ?[0m  [["user_id", 38]]
+[active_model_serializers]   ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/active_model_serializers-0.10.8/lib/active_model/serializer/collection_serializer.rb:69
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.76ms)
+Completed 201 Created in 9ms (Views: 2.3ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2019-01-23 09:56:33 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"user_id"=>38, "first_win"=>false, "second_win"=>false, "game"=>{"user_id"=>38, "first_win"=>false, "second_win"=>false}}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "first_win", "second_win", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 38], ["first_win", 0], ["second_win", 0], ["created_at", "2019-01-23 14:56:33.123609"], ["updated_at", "2019-01-23 14:56:33.123609"]]
+  ↳ app/controllers/api/v1/games_controller.rb:14
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/games_controller.rb:14
+[active_model_serializers] Rendered GameSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 201 Created in 5ms (Views: 0.8ms | ActiveRecord: 1.5ms)
+
+
+Started PATCH "/api/v1/games/38" for 127.0.0.1 at 2019-01-23 09:56:39 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"first_win"=>true, "second_win"=>false, "id"=>"38", "game"=>{"first_win"=>true, "second_win"=>false}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+Started PATCH "/api/v1/games/38" for 127.0.0.1 at 2019-01-23 09:56:40 -0500
+Processing by Api::V1::GamesController#update as JSON
+  Parameters: {"first_win"=>true, "second_win"=>true, "id"=>"38", "game"=>{"first_win"=>true, "second_win"=>true}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 2)):
+  
+app/controllers/api/v1/games_controller.rb:23:in `update'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateGames (20190121215403)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "games"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190121215403"]]
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUsers (20190121215307)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.4ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190121215307"]]
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateUsers (20190121215307)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190121215307_create_users.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar, "streak" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190121215307_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190121215307"]]
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateGames (20190121215403)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "first_win" boolean, "second_win" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190121215403_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190121215403"]]
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/danggree/.rvm/gems/ruby-2.3.7/gems/rake-12.3.2/lib/rake/task.rb:273

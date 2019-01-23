@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add variables here
   let allGames = []
   let allUsers = []
+  let gameObj = {}
   const BASE_URL = "http://localhost:3000"
   const GAME_URL = `${BASE_URL}/api/v1/games`
   const USER_URL = `${BASE_URL}/api/v1/users`
@@ -31,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   newUserFormDiv.addEventListener('submit', (e) => {
     e.preventDefault()
-    // console.log(e.target);
     if (e.target.className === "new_user_form") {
       const newUserForm = document.querySelector('.new_user_form')
       const newUsernameValue = newUserForm.querySelector('#new_username').value
@@ -44,6 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         body: JSON.stringify({
           "username": newUsernameValue
+          "streak": 0
+          // custom logic to update streak each time user wins a game
         })
       })
       .then( r => r.json() )
@@ -60,20 +62,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // door3 is the TRAPPPP!!!!!
   gameCanvas.addEventListener('click', (e) => {
-
-    // app needs to keep track of the number of clicks on the door
-    // if the first click is door 1 or door 2
-    // patch method to update first win to true
-    // if the second click is door 1 or door 2
-    // patch mathod to update the second win to true
-    // and create and render a new game
-    // if the first or second click is door 3
-    // terminate the game
-    if (e.target.dataset.doorId === "1") {
+    if (e.target.dataset.doorId === "1" || e.target.dataset.doorId === "2") {
       // console.log(e.target);
       let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
       let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
-      openDoor(1)
+      openDoor(parseInt(e.target.dataset.doorId))
+      if (gameObj.first_win) {
+        gameObj.second_win = true
+      } else {
+        gameObj.first_win = true
+      }
+      debugger
 
       fetch(`${GAME_URL}/${currentGame.id}`, {
         method: 'PATCH',
@@ -82,17 +81,12 @@ document.addEventListener('DOMContentLoaded', () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          "first_win": true
+          "first_win": gameObj.first_win,
+          "second_win": gameObj.second_win
         })
       })
-    } // end of door1 if statement
 
-    else if (e.target.dataset.doorId === "2") {
-      let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
-      let currentUser = allGames.find( game => game.user_id == e.target.dataset.userId )
-      console.log("is it hitting this one?");
-      openDoor(2)
-    } // end of door2 else if statement
+    } // end of door1 if statement
 
     else if (e.target.dataset.doorId === "3") {
       openDoor(3)
@@ -136,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then( r => r.json() )
     .then( newGameData => {
+      gameObj = newGameData
       console.log(newGameData, "I'm in line 214")
       allGames.push(newGameData)
       const newGame = gameCanvas.querySelector('.new_game')
