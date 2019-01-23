@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then( r => r.json() )
       .then( newUser => {
+        allUsers.push(newUser)
         newUserFormDiv.innerHTML = ""
         gameCanvas.innerHTML = renderNewGame()
         const newGame = gameCanvas.querySelector('.new_game')
@@ -108,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /****************** HELPER **********************************/
   // Add helper funcitons here
+
   function newUserForm() {
     let newUserForm = `
       <form class="new_user_form" action="index.html" method="post">
@@ -118,6 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return newUserForm
   }
 
+  // creates a new game data and renders the doors
   function createNewGame(user) {
     fetch(GAME_URL, {
       method: 'POST',
@@ -157,6 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return gameCanvas
   }
 
+  // renders randomly generated doors
   function renderDoors(game) {
     let door1 = `
       <div class="perspective">
@@ -180,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return shuffleDoor(doorArray)
   }
 
+  // renderDoors helper method to shuffle the doors
   function shuffleDoor(doorArray) {
     let currentIndex = doorArray.length
     let temp;
@@ -195,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return doorArray.join('')
   }
 
+  // opens doors upon users click
   function openDoor(id) {
     let x = gameCanvas.querySelector(`[data-door-id="${id}"]`)
     if (x.classList.contains("thumbOpened")) {
@@ -204,6 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // renders gameOverPage after user clicks on door3
   function renderGameOverPage() {
     let gameOver = `
       <h3>Aw, you lost!</h3>
@@ -211,7 +218,6 @@ document.addEventListener('DOMContentLoaded', () => {
     `
     return gameOver
   }
-
   /****************** HELPER **********************************/
 
 }) // end of DOMContentLoaded
