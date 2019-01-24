@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("the DOM has loaded")
-
+  
   /***************** START VARIABLES ***************************/
 
   let allGames = []
