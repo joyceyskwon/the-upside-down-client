@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const newUserFormDiv = document.querySelector('.new_user_form_div')
   const gameCanvas = document.querySelector('.game_canvas')
   const newGamePage = document.querySelector('.new_continued_game')
+  const demogorgonSound = new Audio("demogorgon_sound.mp3")
 
   /************** END VARIABLES ********************************/
 
@@ -129,9 +130,10 @@ document.addEventListener('DOMContentLoaded', () => {
     else if (e.target.dataset.doorId === "3") {
       let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       openDoor(parseInt(e.target.dataset.doorId))
+      // demogorgonSound.play()
       setTimeout( () => {
         newGamePage.innerHTML = ""
-        debugger
+
         gameCanvas.innerHTML = renderGameOverPage(currentUser)
       }, 2000)
 
