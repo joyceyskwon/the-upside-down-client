@@ -1,52 +1,21 @@
-# README
+# WELCOME TO THE UPSIDE DOWN!
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ready to enter the upside down? This game is inspired by the Stranger Things, featuring two characters from the series: Eleven and Demogorgon. Tip: please use headphones for best experience!
 
-Things you may want to cover:
+* Game rules
+1. Hiding behind one of three doors is a Demogorgon.
+2. Your mission is to open two of the doors without running into a Demogorgon.
+3. If you manage to avoid the Demogorgon until you open the very last door, you win!
+4. See if you can score a winning streak!
 
-* Ruby version
+* How to start the game
+1. Click the logo to log in
+2. Type in the username
+3. Carefully read the rules
+4. And off you go!
 
-* System dependencies
+* How it's built
+This game is our first full-stack project at Flatiron School. We are using Ruby on Rails API for the backend, and HTML/CSS/JS for the frontend. The server handles the 'has-many' association between the user and game models in the JSON. The Rails API and a user form create a resource and render the response asynchronously. This game does not use authentication with encrypted passwords. User is effectively signed out when the page refreshes.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-Game Rules
-1. hiding behind one of three doors is a trap
-2. your mission is to open all of the doors without running into the trap
-3. if you manage to avoid the trap until you open the very last door, you win
-4. see if you can score a winning streak!
-
-Game logic
-1. user is able to create a username
-  - User controller: create method, routes: create
-2. three doors render, but one of them has a trap
-  - three buttons, with different data-actions, (or data-id)
-  - generating data-action for buttons randomly
-  - create an array of actions and assign button actions randomly
-    - [ o , x , o ] <— generated randomly every game
-3. when user clicks on one of the doors, js (if statemnt) checks if that door is the trap.
-  - event listener on users click on the button (each door needs a randomly generated (o,x) data-action, so it listens to the click and knows which one it is a trap (or not a trap)
-4. if it does have the trap, the game ends and the user gets 0 streak
-  - if (x is clicked) game terminates…?
-  - Game over page?? Option to restart (create user)
-5. if it doesn’t have the trap, the game continues. the clicked door opens and user can pick another door.
-  - event listener on 'o' button, then 'open door'
-    - if (o is clicked, open that door) {}
-6. user clicks again and if it is a trap, the game ends and the same logic on the fourth step repeats.
-7. if it isn’t a trap, the user wins and the new game model gets created, and the game continues, and the user has 1 streak
-  - if (o is clicked again, that door opens){} && new game is generated through step 2.
-  - create new Game, with the same user_id
-8. steps from 2 - 7 repeats until the user chooses the wrong door
+* Challenges and Stretch Goals
+Some of the challenges we faced building this game was building infinite loop of games for winning streak. Three doors had their own unique ID to listen to the event and three had only two outcomes. The way we solved it was to assign a separate event listener for winning streak games and counting the number of streaks for each user. In the next version, we hope to limit the number of games each user can play by assigning more doors in the initial game and decrementing its number as they win each game. Additionally, we would like to implement login using password and authentication.
