@@ -1,9 +1,23 @@
 html {
-  background: url("https://thumbs.gfycat.com/CalmHollowAsianlion-size_restricted.gif") no-repeat center center fixed;
+  background: url("https://media1.tenor.com/images/a35a61f96da510a0e81e46589145bd0e/tenor.gif?itemid=5775450") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+h3 {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 3em;
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  font-family: 'Waiting for the Sunrise', cursive;
+  font-size: 1.5em;
+  color: #fff;
+  text-align: center;
 }
 
 .typewriter h1 {
@@ -30,16 +44,6 @@ html {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #fff; }
-}
-
-h3 {
-  color: #fff;
-  text-align: center;
-}
-
-p {
-  color: #fff;
-  text-align: center;
 }
 
 .center {
