@@ -20,6 +20,10 @@ p {
   text-align: center;
 }
 
+button {
+
+}
+
 .typewriter h1 {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
@@ -67,9 +71,15 @@ p {
 }
 
 .doors {
-  margin: auto;
-  width: 100%;
+  float: right;
   position: relative;
+  left: -50%; /* or right 50% */
+  text-align: left;
+}
+
+.doors > .perspective {
+  position: relative;
+  left: 50%;
 }
 
 .thumb {
