@@ -116,8 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // if the user passes the first game
       while (gameObj.first_win && gameObj.second_win) {
         console.log('%c loop', 'color:blue');
-        newGamePage.innerHTML = renderContinuePlay(currentGame)
-        scrollUp(100)
+        setTimeout( () => {
+          newGamePage.innerHTML = renderContinuePlay(currentGame)
+          scrollUp(100)
+        }, 1000)
         if (gameObj.first_win || gameObj.second_win !== true) {
           break
         }
@@ -125,10 +127,12 @@ document.addEventListener('DOMContentLoaded', () => {
     } // end of door1 if statement
     // door3 (TRAP) event listener
     else if (e.target.dataset.doorId === "3") {
+      let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       openDoor(parseInt(e.target.dataset.doorId))
       setTimeout( () => {
         newGamePage.innerHTML = ""
-        gameCanvas.innerHTML = renderGameOverPage()
+        debugger
+        gameCanvas.innerHTML = renderGameOverPage(currentUser)
       }, 2000)
 
       gameCanvas.addEventListener('click', (e) => {
@@ -205,10 +209,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameCanvas = `
       <div class="new_game">
         <h3>Game Rules</h3>
-        <p>1. Hiding behind one of three doors is a trap.<br>
-        2. your mission is to open all of the doors without running into the trap<br>
-        3. if you manage to avoid the trap until you open the very last door, you win<br>
-        4. see if you can score a winning streak!</p>
+        <p>1. Hiding behind one of three doors is a Demogorgon.<br>
+        2. Your mission is to open two of the doors without running into a Demogorgon.<br>
+        3. If you manage to avoid the Demogorgon until you open the very last door, you win!<br>
+        4. See if you can score a winning streak!</p>
         <br>
         <div class="doors">
         </div>
@@ -273,10 +277,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // renders gameOverPage after user clicks on door3
-  function renderGameOverPage() {
+  function renderGameOverPage(currentUser) {
     let gameOver = `
-      <h3>Aw, you lost!</h3>
-      <button class="play_again" type="button" name="button">Play Again</button>
+      <h3 class="lost">Oh no! Demogorgon got you!</h3>
+      <p>Your highest streak is ${currentUser.streak}</p>
+      <button class="play_again" type="button" name="button">Try again?</button>
+      <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Stranger-Things-Barb.png" alt="barb">
     `
     return gameOver
   }
@@ -291,7 +297,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderContinuePlay(currentGame) {
     let continuePlay = `
-      <h3 class="safe">Whew! You're safe! Continue?</h3>
+      <h3 class="safe">Whew! That was close! Continue?</h3>
       <button data-game-id="${currentGame.id}" data-user-id="${currentGame.user_id}" class="continue_play" type="button" name="button">you sure..?</button>
     `
     return continuePlay

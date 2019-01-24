@@ -17,6 +17,10 @@ h3.safe {
   color: #00FF00;
 }
 
+h3.lost {
+  color: #f44336;
+}
+
 p {
   font-family: 'Permanent Marker', cursive;
   font-size: 1.5em;
