@@ -1,3 +1,51 @@
+html {
+  background: url("https://thumbs.gfycat.com/CalmHollowAsianlion-size_restricted.gif") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.typewriter h1 {
+  font-family: 'Waiting for the Sunrise', cursive;
+  color: #fff;
+  font-size: 4em;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .12em solid #fff; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #fff; }
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+}
+
+p {
+  color: #fff;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
 .perspective {
   background: url("http://dc428.4shared.com/img/QWu4ziBq/s3/doorBorder.png");
   background-repeat: no-repeat;
@@ -12,6 +60,12 @@
   -webkit-perspective: 450;
   border-radius: 3px;
   box-sizing: border-box;
+}
+
+.doors {
+  margin: auto;
+  width: 100%;
+  position: relative;
 }
 
 .thumb {

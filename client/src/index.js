@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const BASE_URL = "http://localhost:3000"
   const GAME_URL = `${BASE_URL}/api/v1/games`
   const USER_URL = `${BASE_URL}/api/v1/users`
-  const header = document.querySelector('.header')
+  const header = document.querySelector('header')
   const newUserFormDiv = document.querySelector('.new_user_form_div')
   const gameCanvas = document.querySelector('.game_canvas')
   const newGamePage = document.querySelector('.new_continued_game')
@@ -36,15 +36,14 @@ document.addEventListener('DOMContentLoaded', () => {
   /****************** END FETCH **********************************/
 
   /*************** START EVENT LISTENERS ************************/
-// IS MY CACHE BEING TRACKEDDDDD?!!
   header.addEventListener('click', (e) => {
     newUserFormDiv.innerHTML = newUserForm()
   }) // end of header event listener
 
   newUserFormDiv.addEventListener('submit', (e) => {
     e.preventDefault()
-    if (e.target.className === "new_user_form") {
-      const newUserForm = document.querySelector('.new_user_form')
+    if (e.target.id === "new_user_form") {
+      const newUserForm = document.querySelector('#new_user_form')
       const newUsernameValue = newUserForm.querySelector('#new_username').value
 
       fetch(USER_URL, {
@@ -87,6 +86,8 @@ document.addEventListener('DOMContentLoaded', () => {
         newGamePage.addEventListener('click', (e) => {
           const continuePlay = newGamePage.querySelector('.continue_play')
           newGamePage.style.diplay = "none"
+
+          ++currentUser.streak
 
           fetch(`${USER_URL}/${currentUser.id}`, {
             method: 'PATCH',
@@ -143,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function newUserForm() {
     let newUserForm = `
-      <form class="new_user_form" action="index.html" method="post">
+      <form id="new_user_form" class="center" action="index.html" method="post">
         <input required id="new_username" type="text" name="username" value="" placeholder="Enter your username">
         <input type="submit" value="Create Username">
       </form>
@@ -292,5 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // }
 
   /*************** END HELPER **********************************/
+
+
 
 }) // end of DOMContentLoaded
