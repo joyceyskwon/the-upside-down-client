@@ -220,20 +220,21 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="perspective">
         <div data-door-id="1" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" class="thumb">
         </div>
-        <div class="smiles"></div>
+        <div class="win"></div>
       </div>
     `
     let door2 = `
       <div class="perspective">
         <div data-door-id="2" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="win" class="thumb">
         </div>
-        <div class="smiles"></div>
+        <div class="win"></div>
       </div>
     `
     let door3 = `
       <div class="perspective">
         <div data-door-id="3" data-game-id=${game.id} data-user-id=${game.user_id} data-win-id="lose" class="thumb">
         </div>
+        <div class="lose"></div>
       </div>
     `
     let doorArray = [door1, door2, door3]
