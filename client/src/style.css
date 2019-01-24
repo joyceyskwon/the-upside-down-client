@@ -47,6 +47,10 @@ form input[type=submit] {
   color : transparent;
 }
 
+audio {
+  display: none;
+}
+
 .typewriter h1 {
   font-family: 'Permanent Marker', cursive;
   color: #fff;
@@ -77,7 +81,7 @@ form input[type=submit] {
 
 .form-style-4 {
   display: inline-block;
-  margin-left: 1100px;
+  margin-left: 1050px;
 	width: 450px;
 	font-size: 16px;
 	background: transparent;

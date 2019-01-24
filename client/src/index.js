@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("the DOM has loaded")
-  
+
   /***************** START VARIABLES ***************************/
 
   let allGames = []
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const newUserFormDiv = document.querySelector('.new_user_form_div')
   const gameCanvas = document.querySelector('.game_canvas')
   const newGamePage = document.querySelector('.new_continued_game')
-  const demogorgonSound = new Audio("demogorgon_sound.mp3")
 
   /************** END VARIABLES ********************************/
 
@@ -39,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /*************** START EVENT LISTENERS ************************/
 
   header.addEventListener('click', (e) => {
+    playBGMusic()
     newUserFormDiv.innerHTML = newUserForm()
   }) // end of header event listener
 
@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
       checkFirstOrSecondWin(gameObj)
       patchCurrentGame(currentGame)
 
-      // if the user passes the first game
       while (gameObj.first_win && gameObj.second_win) {
         console.log('%c loop', 'color:blue');
         setTimeout( () => {
@@ -126,17 +125,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       } // end of while loop
     } // end of door1 if statement
-    // door3 (TRAP) event listener
+    // door3 event listener
     else if (e.target.dataset.doorId === "3") {
       let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       openDoor(parseInt(e.target.dataset.doorId))
-      // demogorgonSound.play()
+      demogorgonSound()
       setTimeout( () => {
-        newGamePage.innerHTML = ""
-
-        gameCanvas.innerHTML = renderGameOverPage(currentUser)
+        fetch(`${USER_URL}/${currentUser.id}`)
+        .then( r => r.json() )
+        .then( userData => {
+          newGamePage.innerHTML = ""
+          gameCanvas.innerHTML = renderGameOverPage(userData)
+        })
       }, 2000)
-
       gameCanvas.addEventListener('click', (e) => {
         if (e.target.className === "play_again") {
           location.reload()
@@ -181,7 +182,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then( r => r.json() )
     .then( newGameData => {
       gameObj = newGameData
-      // console.log(newGameData, "I'm in line 214")
       allGames.push(newGameData)
       const newGame = gameCanvas.querySelector('.new_game')
       const doors = newGame.querySelector('.doors')
@@ -282,7 +282,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderGameOverPage(currentUser) {
     let gameOver = `
       <h3 class="lost">Oh no! Demogorgon got you!</h3>
-      <p>Your highest streak is ${currentUser.streak}</p>
+      <p>Your highest streak is ${currentUser.streak}!</p>
       <button class="play_again" type="button" name="button">Try again?</button>
       <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Stranger-Things-Barb.png" alt="barb">
     `
@@ -307,6 +307,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function scrollUp(cordinate) {
     window.scrollTo(0, cordinate)
+  }
+
+  function demogorgonSound() {
+    let audio = document.createElement("AUDIO")
+    if (audio.canPlayType("audio/mpeg")) {
+      audio.setAttribute("src", "./assets/demogorgon.mp3")
+      audio.setAttribute("autoplay", "true")
+    }
+    audio.setAttribute("controls", "controls")
+    document.body.appendChild(audio)
+  }
+
+  function playBGMusic() {
+    return document.getElementById("bg_music").play()
   }
 
   /*************** END HELPER **********************************/
