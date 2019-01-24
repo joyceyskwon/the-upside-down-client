@@ -135,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .then( r => r.json() )
         .then( userData => {
           newGamePage.innerHTML = ""
+          scrollUp(100)
           gameCanvas.innerHTML = renderGameOverPage(userData)
         })
       }, 2000)
@@ -283,7 +284,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameOver = `
       <h3 class="lost">Oh no! Demogorgon got you!</h3>
       <p>Your highest streak is ${currentUser.streak}!</p>
-      <button class="play_again" type="button" name="button">Try again?</button>
+      <button class="play_again" type="button" name="button" id="scaryButton">Try again?</button>
+      <br>
+      <br>
       <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Stranger-Things-Barb.png" alt="barb">
     `
     return gameOver
@@ -300,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderContinuePlay(currentGame) {
     let continuePlay = `
       <h3 class="safe">Whew! That was close! Continue?</h3>
-      <button data-game-id="${currentGame.id}" data-user-id="${currentGame.user_id}" class="continue_play" type="button" name="button">you sure..?</button>
+      <button data-game-id="${currentGame.id}" data-user-id="${currentGame.user_id}" class="continue_play" id="scaryButton" type="button" name="button">you sure...?</button>
     `
     return continuePlay
   }
