@@ -74,13 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   newGamePage.addEventListener('click', (e) => {
     if (e.target.className === "continue_play") {
-      console.log(e.target);
       let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
       let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       console.log('%c listener', 'color:orange');
       newGamePage.innerHTML = ""
       // ++currentUser.streak
-      debugger
       fetch(`${USER_URL}/${currentUser.id}`, {
         method: 'PATCH',
         headers: {
@@ -119,6 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       while (gameObj.first_win && gameObj.second_win) {
         console.log('%c loop', 'color:blue');
         newGamePage.innerHTML = renderContinuePlay(currentGame)
+        scrollUp(100)
         if (gameObj.first_win || gameObj.second_win !== true) {
           break
         }
@@ -147,9 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function newUserForm() {
     let newUserForm = `
-      <form id="new_user_form" class="center" action="index.html" method="post">
+      <br>
+      <br>
+      <br>
+      <br>
+      <form id="new_user_form" class="form-style-4 center" action="index.html" method="post">
         <input required id="new_username" type="text" name="username" value="" placeholder="Enter your username">
-        <input type="submit" value="Create Username">
+        <input type="submit" value="ready...?">
       </form>
     `
     return newUserForm
@@ -288,10 +291,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function renderContinuePlay(currentGame) {
     let continuePlay = `
-      <h3>Continue Playing?</h3>
-      <button data-game-id="${currentGame.id}" data-user-id="${currentGame.user_id}" class="continue_play" type="button" name="button">Continue</button>
+      <h3 class="safe">Whew! You're safe! Continue?</h3>
+      <button data-game-id="${currentGame.id}" data-user-id="${currentGame.user_id}" class="continue_play" type="button" name="button">you sure..?</button>
     `
     return continuePlay
+  }
+
+  function scrollUp(cordinate) {
+    window.scrollTo(0, cordinate)
   }
 
   /*************** END HELPER **********************************/
