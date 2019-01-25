@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       console.log('%c listener', 'color:orange');
       newGamePage.innerHTML = ""
-      // ++currentUser.streak
       fetch(`${USER_URL}/${currentUser.id}`, {
         method: 'PATCH',
         headers: {
@@ -119,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout( () => {
           newGamePage.innerHTML = renderContinuePlay(currentGame)
           scrollUp(100)
+
         }, 1000)
         if (gameObj.first_win || gameObj.second_win !== true) {
           break
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderNewGame() {
     let gameCanvas = `
       <div class="new_game">
-        <h3>Game Rules</h3>
+        <h3 class="rules">Game Rules</h3>
         <p>1. Hiding behind one of three doors is a Demogorgon.<br>
         2. Your mission is to open two of the doors without running into a Demogorgon.<br>
         3. If you manage to avoid the Demogorgon until you open the very last door, you win!<br>
@@ -323,7 +323,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function playBGMusic() {
-    return document.getElementById("bg_music").play()
+    const audio = document.getElementById("bg_music")
+    audio.play()
+    const slider = document.querySelector(".slider-wrapper")
+    slider.addEventListener('input', (e) => {
+        audio.volume = e.target.value/100
+    })
   }
 
   /*************** END HELPER **********************************/
