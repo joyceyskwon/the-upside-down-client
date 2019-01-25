@@ -75,30 +75,30 @@ audio {
 
 .thumbnail {
   background-repeat: no-repeat;
-  /* background-position: center center; */
-  /* position: relative; */
-  /* display: inline; */
-  float: right;
-  /* float: left; */
-  /* width: 70px;
+  background-position: center center;
+  position: relative;
+  display: inline;
+  /* float: right; */
+  float: left;
+  width: 70px;
   height: 100px;
   margin: 20px;
   margin-left: 0px;
   -webkit-perspective: 450;
   border-radius: 3px;
-  box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
 .thumbnail_container {
   float: right;
-  /* position: relative; */
-  /* left: -50%; */
-  /* text-align: left; */
+  position: relative;
+  left: -50%;
+  text-align: left;
 }
 
 .thumbnail_container > .thumbnail {
-  /* position: relative; */
-  /* left: 50%; */
+  position: relative;
+  left: 50%;
 }
 
 .typewriter h1 {
@@ -291,6 +291,7 @@ audio {
 
 .rules {
   color: #f44336;
+  text-align: center;
 }
 
 .slider-wrapper {

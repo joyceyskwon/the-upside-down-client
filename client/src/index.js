@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let allUsers = []
   let gameObj = {}
   let streak = 0
+  let condition = 0
   const BASE_URL = "http://localhost:3000"
   const GAME_URL = `${BASE_URL}/api/v1/games`
   const USER_URL = `${BASE_URL}/api/v1/users`
@@ -39,12 +40,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   header.addEventListener('click', (e) => {
     playBGMusic()
-    newUserFormDiv.innerHTML = newUserForm()
+    if (condition === 0) {
+      newUserFormDiv.innerHTML = newUserForm()
+    }
   }) // end of header event listener
 
 
   newUserFormDiv.addEventListener('submit', (e) => {
     e.preventDefault()
+    condition = 1
+
     if (e.target.id === "new_user_form") {
       const newUserForm = document.querySelector('#new_user_form')
       const newUsernameValue = newUserForm.querySelector('#new_username').value
@@ -104,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gameCanvas.addEventListener('click', (e) => {
     console.log('%c test', 'color:red');
+
     // door 1 or 2 event listener
     if (e.target.dataset.doorId === "1" || e.target.dataset.doorId === "2") {
       let currentGame = allGames.find( game => game.id == e.target.dataset.gameId )
@@ -127,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } // end of door1 if statement
     // door3 event listener
     else if (e.target.dataset.doorId === "3") {
+      condition = 0
       let currentUser = allUsers.find( user => user.id == e.target.dataset.userId )
       openDoor(parseInt(e.target.dataset.doorId))
       demogorgonSound()
@@ -158,6 +165,23 @@ document.addEventListener('DOMContentLoaded', () => {
       <br>
       <br>
       <br>
+      <div class="thumbnail_container">
+        <div class="thumbnail">
+          <img src="./assets/eleven.png" alt="eleven" class="eleven">
+        </div>
+        <div class="thumbnail">
+          <img src="./assets/mike.png" alt="mike" class="mike">
+        </div>
+        <div class="thumbnail">
+          <img src="./assets/will.png" alt="will" class="will">
+        </div>
+        <div class="thumbnail">
+          <img src="./assets/lucas.png" alt="lucas" class="lucas">
+        </div>
+        <div class="thumbnail">
+          <img src="./assets/dustin.png" alt="dustin" class="dustin">
+        </div>
+      </div>
       <form id="new_user_form" class="form-style-4 center" action="index.html" method="post">
         <input required id="new_username" type="text" name="username" value="" placeholder="Enter your username">
         <input type="submit" value="ready...?">
@@ -283,12 +307,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderGameOverPage(currentUser) {
     let gameOver = `
       <h3 class="lost">Oh no! Demogorgon got you!</h3>
-      <p>Your highest streak is ${currentUser.streak}!</p>
+      <p>Your highest streak is<br>${currentUser.streak}</p>
       <button class="play_again" type="button" name="button" id="scaryButton">Try again?</button>
       <br>
       <br>
       <img src="https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/Stranger-Things-Barb.png" alt="barb">
     `
+    condition = 1
     return gameOver
   }
 
