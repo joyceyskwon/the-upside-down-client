@@ -1,6 +1,6 @@
 # WELCOME TO THE UPSIDE DOWN!
 
-![](demo.gif)
+![](./assets/demo.gif)
 
 Ready to enter the upside down? This game is inspired by the Stranger Things, featuring two characters from the series: Eleven and Demogorgon. Tip: please use headphones for best experience!
 
