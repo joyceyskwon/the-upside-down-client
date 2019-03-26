@@ -21,3 +21,4 @@ This game is our first full-stack project at Flatiron School. We are using Ruby 
 
 ## Challenges and Stretch Goals
 Some of the challenges we faced building this game was building infinite loop of games for winning streak. Three doors had their own unique ID to listen to the event and three had only two outcomes. The way we solved it was to assign a separate event listener for winning streak games and counting the number of streaks for each user. In the next version, we hope to limit the number of games each user can play by assigning more doors in the initial game and decrementing its number as they win each game. Additionally, we would like to implement login using password and authentication.
+# the-upside-down-client
