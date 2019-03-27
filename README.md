@@ -1,8 +1,10 @@
-# WELCOME TO THE UPSIDE DOWN!
+# The Upside Down: The Front End
 
-![](https://media.giphy.com/media/9Dm6LI9XJ5KCD8zC3R/giphy.gif)
+![demo](https://media.giphy.com/media/9Dm6LI9XJ5KCD8zC3R/giphy.gif)
 
-Ready to enter the upside down? This game is inspired by the Stranger Things, featuring two characters from the series: Eleven and Demogorgon. Tip: please use headphones for best experience!
+Ready to enter The Upside Down? The Upside Down is a game inspired by the Netflix TV series Stranger Things, featuring two characters from the series: Eleven and Demogorgon.
+
+Tip: Please use headphones for optimal experience!
 
 ## How to start the game
 1. Click the logo to log in
